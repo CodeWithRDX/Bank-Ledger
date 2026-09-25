@@ -23,4 +23,8 @@ app.use('/api/accounts/',accountsRouter);
 app.use('/api/transactions/',transactionRouter);
 
 
+app.get('/',(req,res)=>{
+    res.status(200).json({Service: "Banking API", status: "Running"})
+})
+
 module.exports = app;
